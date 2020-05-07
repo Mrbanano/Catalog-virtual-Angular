@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { infoContact } from '../interfases/info-contact.interfases';
 import { infoTeam } from '../interfases/info-team.interfases';
 
+
 @Injectable({
   providedIn: 'root',
 })
@@ -28,8 +29,8 @@ export class InfopaginaService {
   private loadTeam() {
     this.http
       .get('https://catalog-virtual-angular.firebaseio.com/equipo.json')
-      .subscribe((res: infoTeam) => {
-        this.team = res;
+      .subscribe((resp: infoTeam) => {
+          this.team =  resp;
       });
   }
 }
