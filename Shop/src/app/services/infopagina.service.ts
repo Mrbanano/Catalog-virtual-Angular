@@ -10,6 +10,7 @@ import { infoTeam } from '../interfases/info-team.interfases';
 export class InfopaginaService {
   info: infoContact = {};
   loading = false;
+  loadingTeam = true;
   team: infoTeam = {};
 
   constructor(private http: HttpClient) {
@@ -31,6 +32,9 @@ export class InfopaginaService {
       .get('https://catalog-virtual-angular.firebaseio.com/equipo.json')
       .subscribe((resp: infoTeam) => {
           this.team =  resp;
+          setTimeout(() => {
+            this.loadingTeam = false;
+          }, 3000);
       });
   }
 }

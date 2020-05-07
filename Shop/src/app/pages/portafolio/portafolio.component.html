@@ -1,9 +1,17 @@
 <section class="ae-container-fluid ae-container-fluid--inner rk-portfolio">
-  <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
+  <div *ngIf="productsService.loadingProducts" class="spinner">
+    <div class="sk-folding-cube">
+      <div class="sk-cube1 sk-cube"></div>
+      <div class="sk-cube2 sk-cube"></div>
+      <div class="sk-cube4 sk-cube"></div>
+      <div class="sk-cube3 sk-cube"></div>
+    </div>
+    <h6 id="loading">Cargando...</h6>
+  </div>
+  <div   *ngIf="!productsService.loadingProducts" class="animated fadeIn ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
     <!----->
-    <a  *ngFor="let product of productsService.products" 
-    routerLink="/item" class="animated fadeIn rk-item ae-masonry__item"
-      ><img src="assets/products/{{product.url}}.jpg" alt="" />
+    <a  *ngFor="let product of productsService.products" routerLink="/item"
+      class="animated fadeIn rk-item ae-masonry__item"><img src="assets/products/{{product.url}}.jpg" alt="" />
       <div class="item-meta">
         <h2>{{product.titulo}}</h2>
         <p>{{product.categoria}}</p>

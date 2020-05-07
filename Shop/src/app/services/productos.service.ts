@@ -22,8 +22,10 @@ export class ProductosService {
         )
         .subscribe((res: Product[]) => {
           console.log(res);
-          this.loadingProducts = false;
           this.products = res;
+          setTimeout(() => {
+            this.loadingProducts = false;
+          }, 2000);
         });
    }
 }
