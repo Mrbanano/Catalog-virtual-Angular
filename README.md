@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/Mrbanano"><img src="https://i.postimg.cc/rm6J4PPy/undraw-shopping-app-flsj.png" width="60%"></a>
+  <a href="https://github.com/Mrbanano"><img src="https://i.postimg.cc/rm6J4PPy/undraw-shopping-app-flsj.png" width="40%"></a>
 </p>
 </p>
 <p align="center">
