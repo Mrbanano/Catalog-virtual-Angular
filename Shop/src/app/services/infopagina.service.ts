@@ -28,13 +28,18 @@ export class InfopaginaService {
   }
 
   private loadTeam() {
-    this.http
-      .get('https://catalog-virtual-angular.firebaseio.com/equipo.json')
-      .subscribe((resp: infoTeam) => {
-          this.team =  resp;
-          setTimeout(() => {
-            this.loadingTeam = false;
-          }, 3000);
-      });
+    return new Promise((resolve, rejects) => {
+      this.http
+        .get('https://catalog-virtual-angular.firebaseio.com/equipo.json')
+        .subscribe((resp: infoTeam) => {
+          this.team = resp;
+          this.quickLoading();
+        });
+    });
+  }
+  quickLoading() {
+      setTimeout(() => {
+        this.loadingTeam = false;
+      }, 3000);
   }
 }
