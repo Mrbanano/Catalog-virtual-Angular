@@ -1,9 +1,9 @@
 <section *ngIf="products">
   <header [ngStyle]="{'background-image':'url(assets/products/'+ id +'/main.jpg)'}"
     class="animated fadeIn rk-portfolio-cover item-inside-1">
-    <div class="item-inside__meta">
-      <h1   id="title" class="ae-u-bolder rk-portfolio-title">{{products.producto}}</h1>
-      <p id="title" class="ae-theta rk-portfolio-category">{{products.categoria}}</p>
+    <div id='title' class="item-inside__meta">
+      <h1 class="ae-u-bolder rk-portfolio-title">{{products.producto}}</h1>
+      <p class="ae-theta rk-portfolio-category">{{products.categoria}}</p>
     </div>
   </header>
   <div class="ae-container-fluid">
