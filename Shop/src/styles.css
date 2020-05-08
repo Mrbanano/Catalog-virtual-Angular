@@ -1,6 +1,9 @@
 .ae-eta{
   text-align: justify;
 }
+#title{
+  color: #eee;
+}
 /* You can add global styles to this file, and also import other style files */
 #loading{
   text-align: center;
