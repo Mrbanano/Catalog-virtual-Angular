@@ -21,11 +21,14 @@ export class ProductosService {
           'https://catalog-virtual-angular.firebaseio.com/productos_idx.json'
         )
         .subscribe((res: Product[]) => {
-          console.log(res);
           this.products = res;
           setTimeout(() => {
             this.loadingProducts = false;
           }, 2000);
         });
    }
+  getProduct(id: string){
+    return this.http.get(
+      `https://catalog-virtual-angular.firebaseio.com/productos/${id}.json`);
+  }
 }
